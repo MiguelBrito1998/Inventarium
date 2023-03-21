@@ -1,0 +1,46 @@
+body{
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: slategrey ;
+}
+
+.welcome{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    background-color: blueviolet;
+    border-radius: 10%;
+    padding: 30px;
+    border: 5px solid black;
+}
+
+.titulo{
+    width: ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+    text-align: center;
+    height: 150px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 22px;
+    font-weight:bold;
+    text-align: center;
+}
+
+.Registrar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+    text-align: center;
+    height: 150px;
+}
+
+#hover:hover{
+    height: 22px;
+}
