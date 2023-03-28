@@ -19,7 +19,6 @@ body{
 }
 
 .titulo{
-    width: ;
     display: flex;
     flex-direction: column;
     justify-content: center;
