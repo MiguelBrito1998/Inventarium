@@ -22,3 +22,4 @@ sql5="CREATE TABLE Venta(ID int auto_increment,ID_cliente int , Compra json, CON
 cursor.execute(sql5)
 
 
+#Recomendaciones
