@@ -1,4 +1,4 @@
-Nombre_producto= ["Nintendo Switch",
+Nombre_producto=["Nintendo Switch",
     "PlayStation 5",
     "Xbox Series X",
     "PC Gamer",
@@ -68,5 +68,4 @@ Nombre_producto= ["Nintendo Switch",
     "Juego Overwatch para PC",
     "Juego League of Legends para PC",
     "Juego Valorant para PC"]
-
 
