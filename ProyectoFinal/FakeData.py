@@ -5,7 +5,7 @@ import datetime
 import random as rm
 from Listas import Nombre_producto
 import json
-
+# Chevere papi
 
 fake=Faker()
 Producto=[]
