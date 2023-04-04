@@ -1,45 +1,104 @@
 body{
-    height:100vh;
+    height: 100vh;
+    background-image: url(./fondo.jpg);
+    background-color: black;
+    
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: slategrey ;
-}
 
-.welcome{
-    height: 150px;
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    background-color: blueviolet;
-    border-radius: 10%;
-    padding: 30px;
-    border: 5px solid black;
 }
 
 .titulo{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: 5px;
     text-align: center;
-    height: 150px;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 22px;
-    font-weight:bold;
-    text-align: center;
+    justify-content: space-around;
 }
 
-.Registrar{
+img{
+    height: 800px;
+    width: 600px;
+}
+
+.login-box{
+    width:100%;
+}
+.izquierda{
+    height: 50vh;
+    float: left;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.derecha{
+    height: 50vh;
+    float: right;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.letra{
+    color: white;
+    font-size: 30px;
+    font-weight: 10px;
+}
+
+.login{
+    background-image: linear-gradient(red,blue);
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px;
+    border: solid white;
+}
+
+.marca{
+    align-self: center;
+    height: 70px;
+    width: 70px;
+    padding:20px;
+    border-radius:30px ;
+    background-color:black ;
+}
+
+.imagen{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+input{
+    width: 200px ;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+    margin:5px;
+    border:solid black
+
+}
+
+.input{
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 5px;
-    text-align: center;
-    height: 150px;
 }
 
-#hover:hover{
-    height: 22px;
+
+.PEPE{
+    width: 95px ;
+    border:solid black
+}
+
+.PEPE:hover{
+    height: 25px;
+    width: 100px; ;
 }
