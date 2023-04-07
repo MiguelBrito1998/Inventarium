@@ -1,11 +1,12 @@
 body{
-    height: 100vh;
+    
     background-image: url('./llu.png');
     /* background:  linear-gradient(red,black); */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    overflow: scroll;
 
 }
 
@@ -114,4 +115,17 @@ input{
     width: 100px; ;
 }
 
-/* comer */
+
+.tabla{
+    background-color: white;
+}
+
+
+
+
+.todo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
