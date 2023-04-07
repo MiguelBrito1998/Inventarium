@@ -34,4 +34,3 @@ def Ventas():
 
 app.run(debug=True)
 
-
