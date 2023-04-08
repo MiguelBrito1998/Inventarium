@@ -8,6 +8,24 @@
     <title>Ventas</title>
 </head>
 <body>
-    <p>comer queso</p>
+    <table class="General">
+        <thead>
+            <tr class="encabezado">
+                <th>Articulos</th>
+                <th>Monto Total</th>
+            </tr>
+        </thead>
+        <tbody class="contenido">
+            {% for row in Ventas %}
+            <tr>
+                <!-- <td>{{row[0]}}</td> -->
+                <td>{{row[2]}}</td>
+                <td>{{row[4]}}</td>
+                <td><button>Presione para eliminar</button></td>
+                <td><button>Presione para actualizar</button></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>

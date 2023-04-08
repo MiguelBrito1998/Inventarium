@@ -11,10 +11,10 @@ try:
     if 'conection' in locals():
         cursor=conection.cursor()
         # Insertar productos
-        # cursor.executemany("""INSERT INTO producto(id, Nombre, Precio, precio_descuento, Tipo_producto, Existencias, Fecha_creacion, Fecha_actualizacion) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)""", Producto)
+        cursor.executemany("""INSERT INTO producto(id, Nombre, Precio, precio_descuento, Tipo_producto, Existencias, Fecha_creacion, Fecha_actualizacion) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)""", Producto)
 
         # insertar Usuarios
-        cursor.executemany("""INSERT INTO usuario(id, Nombre, apellido, correo, Usuario,clave, Rol, Fecha_creacion, Fecha_actualizacion) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)""",Usuarios )
+        # cursor.executemany("""INSERT INTO usuario(id, Nombre, apellido, correo, Usuario,clave, Rol, Fecha_creacion, Fecha_actualizacion) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)""",Usuarios )
 
         # #Insertar Roles
         # cursor.executemany("""INSERT INTO rol(id, rol ,Fecha_creacion, Fecha_actualizacion) VALUES (%s,%s,%s,%s)""", Roles )
@@ -22,10 +22,10 @@ try:
         # # Insertar clientes
         # cursor.executemany("""INSERT INTO cliente(id, Nombre, apellido, cedula , Numero_telefono , Correo, Fecha_creacion, Fecha_actualizacion) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)""", Clientes )
 
-        # # Insertar ventas
-        # cursor.executemany("""INSERT INTO venta(id, ID_cliente, compra, Monto_total, IVA , Fecha_creacion, Fecha_actualizacion) VALUES (%s,%s,%s,%s,%s,%s,%s)""", Ventas )
+        # Insertar ventas
+        cursor.executemany("""INSERT INTO venta(id, ID_cliente, compra, IVA, Monto_Total , Fecha_creacion, Fecha_actualizacion) VALUES (%s,%s,%s,%s,%s,%s,%s)""", Ventas )
 
-        if(len(Usuarios)==cursor.rowcount):
+        if(len(Ventas)==cursor.rowcount):
             conection.commit()
             print("Los datos falsos fueron insertados correctamente")
         else:

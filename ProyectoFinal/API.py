@@ -26,11 +26,20 @@ def Productos():
 
 @app.route('/Clientes')
 def Clientes():
-    return send_file('./templates/Clientes.html')
+    with conection.cursor() as cursor:
+        # Obtener todos los datos de la tabla
+        cursor.execute("SELECT * FROM cliente")
+        cliente=cursor.fetchall()
+    return render_template('Clientes.html',cliente=cliente)
+    # return send_file('./templates/Clientes.html')
 
 @app.route('/Ventas')
 def Ventas():
-    return send_file('./templates/Ventas.html')
-
+    with conection.cursor() as cursor:
+        # Obtener todos los datos de la tabla
+        cursor.execute("SELECT * FROM venta")
+        Ventas=cursor.fetchall()
+    return render_template('Ventas.html',Ventas=Ventas)
+    # return send_file('./templates/Ventas.html')
 app.run(debug=True)
 

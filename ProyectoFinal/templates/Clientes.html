@@ -8,6 +8,25 @@
     <title>Clientes</title>
 </head>
 <body>
-    <p>comer</p>
+    <h1>Productos disponibles</h1>
+    <table class="todo">
+        <thead>
+            <tr class="titulo2">
+                <th>Nombre</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody class="tabla">
+            {% for row in cliente %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[3]}}</td>
+                <td><button>Presione para eliminar</button></td>
+                <td><button>Presione para actualizar</button></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>

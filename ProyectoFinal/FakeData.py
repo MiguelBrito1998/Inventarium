@@ -16,7 +16,6 @@ Clientes=[]
 
 
 for i in range(50):
-
     # Datos falsos de productos
     x=fake.pyfloat(left_digits=4,right_digits=2,positive=True, min_value=30,max_value=200)
     descuentos=fake.pyfloat(left_digits=4,right_digits=2,positive=True, min_value=0.5 ,max_value=0.95)
@@ -38,17 +37,54 @@ for i in range(3):
     rol=['cliente','gerente','cajero']
     Roles.append((i, rol[i], datetime.date.today(), datetime.date.today()))
 
-# Crear datos de ventas
 
-sum=0
-for _ in range(50):
-    x=rm.randint(1,20)
+def compra():
     lista=[]
-    for p in range(x):
-        lista.append(rm.randint(0,51))
-    for i in Nombre_producto:
-        for j in lista:
-            if(Nombre_producto.index(i)==j):
-                sum=sum+float(Producto[2][2])
-    Ventas.append( (_, int(fake.pyfloat(left_digits=4,right_digits=2, min_value=0 ,max_value=50)), json.dumps(lista)  ,round(1.16*sum,3) , round(0.16*sum,3),datetime.date.today(), datetime.date.today() ) )
+    x=rm.randint(1,10)
+    for i in range(x):
+        lista.append(rm.randint(0,len(Producto)-1))
+    return lista
+
+def lista_precios(variable):
+    precios=[]
+    for p in variable:
+        precios.append(Producto[p][2])
+    return precios
+
+for i in range(10):
+    variable=compra()
+    Listica=lista_precios(variable)
+    Total=0
+    for _ in Listica:
+        Total=Total+_
+    Ventas.append( (i, int(fake.pyfloat(left_digits=4,right_digits=2, min_value=0 ,max_value=50)), json.dumps(variable) ,round(0.16*Total,3), round(1.16*Total,3),datetime.date.today(), datetime.date.today() ) )
+    # print(Total)
+
+
+
+
+
+
+
+
+
+# for _ in range(50):
+#     x=2
+#     lista=[]
+#     for p in range(x):
+#         lista.append(rm.randint(0,50))
+#     sum=0
+#     for i in Nombre_producto:
+#         for j in lista:
+#             if(Nombre_producto.index(i)==j):
+#                 sum=sum+float(Nombre_producto.index(j))
+#                 print(f" {lista}  . {sum}  ")
+    
+
+# cont=0
+# for i in Producto:
+#     x=Producto[cont][2]
+#     print(f"{x}")
+#     cont+=1
+
 
