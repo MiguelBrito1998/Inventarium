@@ -5,25 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./static/css/indice.css">
+    <link rel="stylesheet" type="text/css" href="./static/css/indice1.css">
     <title>Producto</title>
 </head>
-<body class="todo">
-    <h1>Productos disponibles</h1>
-    <table class="todo">
+<body>
+    <img src="./static/css/controlar.png" class="Logo">
+    <h3 class="tittle">Lista de productos</h3>
+    <table class="General">
         <thead>
-            <tr class="titulo2">
+            <tr >
                 <th>Nombre</th>
                 <th>Precio</th>
+                <th>Descuento</th>
+                <th>Existencias</th>
+                <th>Actualizar</th>
+                <th>Eliminar</th>
             </tr>
         </thead>
-        <tbody class="tabla">
+        <tbody>
             {% for row in resultado %}
             <tr>
-                <td>{{row[0]}}</td>
-                <td>{{row[1]}}</td>
-                <td>{{row[3]}}</td>
-                <td><button>Presione para eliminar</button></td>
-                <td><button>Presione para actualizar</button></td>
+                <td class="arreglo">{{row[1]}}</td>
+                <td class="arreglo">{{row[2]}}</td>
+                <td class="arreglo">{{row[3]}}</td>
+                <td class="arreglo">{{row[5]}}</td>
+                <td class="btn"><img src="./static/css/actualizar.png"></td>
+                <td class="btn"><img src="./static/css/eliminar.png"></td>
             </tr>
             {% endfor %}
         </tbody>

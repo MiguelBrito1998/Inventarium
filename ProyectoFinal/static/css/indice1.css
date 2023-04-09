@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Logo{
+    margin-top: 50px;
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    padding: 20px;
+    border: solid black 5px ;
+    border-radius: 20px;
+}
+
+.tittle{
+    color: white;
+    background-color:#6c0386;
+    padding: 20px;
+    border-radius: 20px ;
+    border: solid black;
+}
+
+.btn{
+    height:50px ;
+    background-color: #8736bd;
+    margin: 5px;
+    
+}

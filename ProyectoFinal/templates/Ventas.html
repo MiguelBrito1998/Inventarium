@@ -5,27 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./static/css/indice.css">
+    <link rel="stylesheet" type="text/css" href="./static/css/indice1.css">
     <title>Ventas</title>
 </head>
 <body>
+    <img src="./static/css/controlar.png" class="Logo">
+    <h3 class="tittle">Lista de ventas realizadas</h3>
     <table class="General">
         <thead>
             <tr class="encabezado">
+                <th>Cliente</th>
                 <th>Articulos</th>
                 <th>Monto Total</th>
+                <th>Actualizar</th>
+                <th>Eliminar</th>
             </tr>
         </thead>
-        <tbody class="contenido">
+        <tbody >
             {% for row in Ventas %}
             <tr>
-                <!-- <td>{{row[0]}}</td> -->
-                <td>{{row[2]}}</td>
-                <td>{{row[4]}}</td>
-                <td><button>Presione para eliminar</button></td>
-                <td><button>Presione para actualizar</button></td>
+                <td class="arreglo">{{row[1]}}</td>
+                <td class="arreglo">{{row[2]}}</td>
+                <td class="arreglo" id="columna2">{{row[4]}}</td>
+                <td class="btn"><img src="./static/css/actualizar.png"></td>
+                <td class="btn"><img src="./static/css/eliminar.png"></td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
 </body>
 </html>
+
+
+
+
+
+

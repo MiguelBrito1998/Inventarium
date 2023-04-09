@@ -113,3 +113,37 @@ input{
 }
 
 
+.General{
+    margin-top: 10px;
+    background-color:#6c0386 ;
+    border: solid black;
+    border-radius: 30px;
+    border-width: 5px;
+}
+
+
+.arreglo{
+    text-align: center;
+    margin: 50px;
+}
+
+table,td{
+    color: white;
+    border:1px solid black;
+    text-align: center;
+    margin: 150px;
+}
+
+img{
+    align-self: center;
+    margin: 10px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+
+}
+
+#columna2{
+    width: 70px;
+}
+
