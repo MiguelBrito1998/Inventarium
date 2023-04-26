@@ -109,7 +109,7 @@ input{
 
 .PEPE:hover{
     height: 25px;
-    width: 100px; ;
+    width: 100px; 
 }
 
 
@@ -146,4 +146,98 @@ img{
 #columna2{
     width: 70px;
 }
+nav{
+    width: 100%;
+    background-color: darkmagenta;
+    color: white;
+    border: solid black 3px;
+}
 
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+li{
+    padding: 0 10px;
+}
+
+nav ul li:last-child{
+    margin-left: auto;
+}
+
+a{
+    text-decoration: none;
+    background-color:white; /* color de fondo */
+    color: black; /* color de texto */
+    font-weight: bold; /* texto en negrita */
+    padding: 5px 10px; /* espacio entre texto y borde */
+    border: solid black 1px; /* sin borde */
+    border-radius: 5px; /* bordes redondeados */
+  }
+
+a:hover{
+    cursor: pointer;
+}
+
+.buscar{
+    display: flex;
+}
+
+.buscar input{
+    width: 240px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #000;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 30px;
+    text-align: start;
+}
+
+.puto{
+    display: flex;
+}
+
+#lupa{
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: solid black 2px;
+    border-radius: 40%;
+}
+
+.form{
+    height: 40px;
+    width: 40px;
+}
+
+input[type="image"]{
+    width: 40px;
+    border: none;
+    display: block;
+    margin: 0 auto;
+}
+
+#insertar{
+    text-align: center;
+    background-color: white;
+    width: 80px;
+    padding:10px;
+}
+
+#insertar:hover{
+    cursor: pointer;
+    text-align: center;
+    background-color: white;
+    width: 85px;
+    padding:10px;
+}
+
+
+.submits{
+    display: flex;
+}

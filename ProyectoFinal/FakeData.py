@@ -68,23 +68,4 @@ for i in range(10):
 
 
 
-# for _ in range(50):
-#     x=2
-#     lista=[]
-#     for p in range(x):
-#         lista.append(rm.randint(0,50))
-#     sum=0
-#     for i in Nombre_producto:
-#         for j in lista:
-#             if(Nombre_producto.index(i)==j):
-#                 sum=sum+float(Nombre_producto.index(j))
-#                 print(f" {lista}  . {sum}  ")
-    
-
-# cont=0
-# for i in Producto:
-#     x=Producto[cont][2]
-#     print(f"{x}")
-#     cont+=1
-
 

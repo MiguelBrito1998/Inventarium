@@ -20,7 +20,7 @@ try:
         # cursor.executemany("""INSERT INTO rol(id, rol ,Fecha_creacion, Fecha_actualizacion) VALUES (%s,%s,%s,%s)""", Roles )
 
         # # Insertar clientes
-        # cursor.executemany("""INSERT INTO cliente(id, Nombre, apellido, cedula , Numero_telefono , Correo, Fecha_creacion, Fecha_actualizacion) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)""", Clientes )
+        cursor.executemany("""INSERT INTO cliente(id, Nombre, apellido, cedula , Numero_telefono , Correo, Fecha_creacion, Fecha_actualizacion) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)""", Clientes )
 
         # Insertar ventas
         cursor.executemany("""INSERT INTO venta(id, ID_cliente, compra, IVA, Monto_Total , Fecha_creacion, Fecha_actualizacion) VALUES (%s,%s,%s,%s,%s,%s,%s)""", Ventas )

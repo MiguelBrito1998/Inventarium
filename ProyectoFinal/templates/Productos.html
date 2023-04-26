@@ -9,8 +9,29 @@
     <title>Producto</title>
 </head>
 <body>
+    <nav>
+        <ul class="opciones">
+            <li> <a href="http://127.0.0.1:5000/Clientes" id="clientes">Clientes</a > </li>
+            <li> <a href="http://127.0.0.1:5000/Productos" id="productos">Productos</a> </li>
+            <li> <a href="http://127.0.0.1:5000/Ventas" id="ventas">Ventas</a> </li>
+            <li> <a href="http://127.0.0.1:5000/Login" id="salir"> Salir </a> </li>
+        </ul>
+    </nav>
     <img src="./static/css/controlar.png" class="Logo">
     <h3 class="tittle">Lista de productos</h3>
+    <div class="submits">
+        <form action="/ResultadosProductos" class="buscar" method="POST">
+            <div class="puto">
+                <input type="text" placeholder="Buscar" name="query">
+                <input type="image" src="./static/css/Busqueda.png" id="lupa">
+            </div>
+        </form>
+        <form action="/TemplateInsertarProducto" class="buscar">
+            <div class="puto">
+                <input type="submit" value="insertar" id="insertar">
+            </div>
+        </form>
+    </div>
     <table class="General">
         <thead>
             <tr >
@@ -23,17 +44,26 @@
             </tr>
         </thead>
         <tbody>
+            {% set counter= 0%}
             {% for row in resultado %}
-            <tr>
-                <td class="arreglo">{{row[1]}}</td>
-                <td class="arreglo">{{row[2]}}</td>
-                <td class="arreglo">{{row[3]}}</td>
-                <td class="arreglo">{{row[5]}}</td>
-                <td class="btn"><img src="./static/css/actualizar.png"></td>
-                <td class="btn"><img src="./static/css/eliminar.png"></td>
-            </tr>
+                {% set counter = counter+1%}
+                <tr>
+                    <td class="arreglo">{{row[1]}}</td>
+                    <td class="arreglo">{{row[2]}}</td>
+                    <td class="arreglo">{{row[3]}}</td>
+                    <td class="arreglo">{{row[5]}}</td>
+                    <form action="/actualizarProducto" method="POST">
+                        <input type="hidden" name="indice" value="{{loop.index0}}">
+                        <td class="btn"> <input type="image" src="./static/css/editar.png" name="{{loop.index0}}"></td>
+                    </form>
+                    <form action="/borrarproducto" method="POST">
+                        <input type="hidden" name="indice" value="{{loop.index0}}">
+                        <td class="btn"> <input type="image" src="./static/css/eliminar.png" name="{{loop.index0}}"></td>
+                    </form>
+                </tr>
             {% endfor %}
         </tbody>
     </table>
+    <script src="interaccion.js"></script>
 </body>
 </html>
