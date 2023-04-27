@@ -241,3 +241,10 @@ input[type="image"]{
 .submits{
     display: flex;
 }
+
+.input{
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

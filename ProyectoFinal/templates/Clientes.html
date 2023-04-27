@@ -52,8 +52,8 @@
                     <td class="arreglo">{{row[2]}}</td>
                     <td class="arreglo">{{row[3]}}</td>
                     <td class="arreglo">{{row[5]}}</td>
-                    <form action="/actualizar" method="POST" >
-                        <input type="hidden" name="index" value="{{loop.index0}}">
+                    <form action="/actualizarCliente" method="POST">
+                        <input type="hidden" name="orden" value="{{loop.index0}}">
                         <td class="btn"> <input type="image" src="./static/css/editar.png" name="{{loop.index0}}"></td>
                     </form>
                     <form action="/eliminar" method="POST">
